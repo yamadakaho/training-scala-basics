@@ -51,6 +51,8 @@ OpenJDK Runtime Environment (AdoptOpenJDK)(build 1.8.0_242-b08)
 OpenJDK 64-Bit Server VM (AdoptOpenJDK)(build 25.242-b08, mixed mode)
 ```
 
+Javaがすでにインストールされていて、そのJavaはそのまま残して起きたいならjenvを使って複数のJavaバージョンを切り替えるとよい。PyenvのJava版みたいな感じか？公式ページと公式GitHubの情報に従ってインストールすれば動いた。Qiitaとかはいつもどおり当てにならない。詳細はここでは省く。
+
 2.2 は
 
 ```
