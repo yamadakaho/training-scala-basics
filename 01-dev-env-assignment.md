@@ -13,4 +13,7 @@ PlayGround, REPL, IDEで素早くScalaソースコードを書き実行できる
  - 2.2 Scalaをインストールしてください
  - 2.3 scalaコマンドでREPLを立ち上げて下さい
 
-2. sbt newで最小限のScalaアプリケーションのディレクトリ構造を作って、IntelliJ IDEAからmain関数の中身を`println("Hello World")`に書き換え、sbtから実行して下さい。
+３. sbt newで最小限のScalaアプリケーションのディレクトリ構造を作って、IntelliJ IDEAからmain関数の中身を`println("Hello World")`に書き換え、sbtから実行して下さい。
+ - 3.1 sbtをインストールして下さい
+ - 3.2 IntelliJ IDEAをインストールして下さい
+ 
