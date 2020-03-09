@@ -67,4 +67,58 @@ scala> println("Hello World")
 Hello World
 ```
 
-2. sbt newで最小限のScalaアプリケーションのディレクトリ構造を作って、IntelliJ IDEAからmain関数の中身を`println("Hello World")`に書き換え、sbtから実行して下さい。
+３. sbt newで最小限のScalaアプリケーションのディレクトリ構造を作って、IntelliJ IDEAからmain関数の中身を`println("Hello World")`に書き換え、sbtから実行して下さい。
+ - 3.1 sbtをインストールして下さい
+ - 3.2 IntelliJ IDEAをインストールして下さい
+ 
+ ```
+ # 3.1 sbtをインストールして下さい
+ brew install sbt
+ ```
+ 
+3.2 IntelliJ IDEAはこちらからダウンロード。無料版で大丈夫です。 https://www.jetbrains.com/idea/
+
+```
+> sbt new sbt/scala-seed.g8
+[info] Loading settings for project global-plugins from plugins.sbt ...
+[info] Loading global plugins from /Users/yu.nishiyama/.sbt/1.0/plugins
+[info] Loading project definition from /Users/yu.nishiyama/project
+[info] Set current project to yu-nishiyama (in build file:/Users/yu.nishiyama/)
+[info] Set current project to yu-nishiyama (in build file:/Users/yu.nishiyama/)
+
+A minimal Scala project. 
+
+# ここで入力を要求されます
+> name [Scala Seed Project]: hello-scala-world
+
+Template applied in /Users/yu.nishiyama/./hello-scala-world
+
+# 作成されたプロジェクトのディレクトリに移動します
+> cd hello-scala-world 
+
+# プロジェクトディレクトリ内でsbtを立ち上げて下さい
+> sbt
+```
+
+IntelliJ IDEAで同プロジェクトを開いたら、Mainクラスを以下のように書き換えて下さい。Mainクラスの書き方、mainメソッドのシグネチャ（引数の型`args: Array[String]`と戻り値の型`Unit`）は覚えておくといいと思います。
+
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    println("Hello World")
+  }
+}
+```
+
+先程のsbtのシェルから`run`を実行します
+
+```
+sbt:hello-scala-world> run
+[info] Done compiling.
+[info] Packaging /Users/＊＊＊＊＊/hello-scala-world/target/scala-2.12/hello-scala-world_2.12-0.1.0-SNAPSHOT.jar ...
+[info] Done packaging.
+[info] Running example.Main 
+Hello World
+[success] Total time: 7 s, completed 2020/03/09 17:41:12
+```
+ 
