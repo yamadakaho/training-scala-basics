@@ -10,7 +10,7 @@ PlayGround, REPL, IDEで素早くScalaソースコードを書き実行できる
 
 ## 課題
 
-以下の課題の結果を[01-dev-env-solution.md](./01-dev-env-solution.md)に貼り付けて、Pull Requestを送る形で提出してください
+以下の課題の結果をこのファイルに貼り付けて、Pull Requestを送る形で提出してください
 
 1. オンラインの[Playground](https://scastie.scala-lang.org/)でScalaの`println("Hello World")`を実行し、結果をブラウザのスクリーンショットとして貼り付けてください
 
