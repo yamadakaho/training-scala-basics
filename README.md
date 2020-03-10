@@ -19,6 +19,13 @@
 - [Scalaスケーラブルプログラミング第3版](https://www.amazon.co.jp/Scala%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%A9%E3%83%96%E3%83%AB%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E7%AC%AC3%E7%89%88-Martin-Odersky-ebook/dp/B01LYPRFI7/ref=sr_1_3?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&keywords=scala&qid=1581858808&s=digital-text&sr=1-3)
 - [Scala研修テキスト (オンライン)](https://scala-text.github.io/scala_text/)
 
+<table>
+  <tr>
+    <td><img width=200 src="https://user-images.githubusercontent.com/7414320/76287981-06d8e080-62e9-11ea-8ae1-f8538c43e5c9.png"></td>
+    <td><img width=200 src="https://user-images.githubusercontent.com/7414320/76287992-0c362b00-62e9-11ea-8f91-0cbf0cf124d5.png"></td>
+  </tr>
+</table>
+
 ## この課題で身につく能力
 
 「本の内容をマスターする」だと際限なく課題の量が膨れ上がるので、短い期間で素早く身につけて欲しい能力を絞り込んで、それらを学ぶのに必要な課題を選んでいます。
