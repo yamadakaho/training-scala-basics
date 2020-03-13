@@ -1,1 +1,16 @@
+## この課題で身につく能力
 
+if/else、パターンマッチを使える
+
+## 課題
+
+実践Scala入門第２章 p.40 -> ... を読んで以下の問に答えて下さい
+
+1. Unitのスーパータイプは`AnyVal`と`AnyRef`どちらでしょう？
+
+2. `null`の型は何でしょう？
+
+3. `Exception`, `AnyRef`, `AnyRef`の3つについてexctendsを使ってそれぞれの関係を表して下さい
+ - XXXXX exnteds YYYYY, YYYYYY extends ZZZZZZのように
+
+4. `Nil`はどういう用途で使われるものですか？この答えは実践Scala入門第２章にはありません。
