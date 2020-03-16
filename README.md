@@ -1,12 +1,12 @@
 マーベリック開発部門トレーニング用のレポジトリです。社内の機密事項は含まないので、公開しています。
 
-「[実践Scala入門](https://www.amazon.co.jp/%E5%AE%9F%E8%B7%B5Scala%E5%85%A5%E9%96%80-%E7%80%AC%E8%89%AF-%E5%92%8C%E5%BC%98-ebook/dp/B07JP9STPW/ref=sr_1_2?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&keywords=scala&qid=1581858808&s=digital-text&sr=1-2)」を中心に、書籍などから課題を出します。 この課題をこなすことが研修のScalaパートのゴールです。
-課題はGitHubなどで提出することで「やり終えた」感を得られるようにしています。
+マーベリック開発部門のメンバーはこちらから[「課題提出トレーニングのポリシー」](https://docs.google.com/document/d/18SWcDVK_urhA4FOpwyjax2d6ZhDA-k9L4mFQnQrMhec/edit#)も確認して下さい。
+
+「[実践Scala入門](https://www.amazon.co.jp/%E5%AE%9F%E8%B7%B5Scala%E5%85%A5%E9%96%80-%E7%80%AC%E8%89%AF-%E5%92%8C%E5%BC%98-ebook/dp/B07JP9STPW/ref=sr_1_2?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&keywords=scala&qid=1581858808&s=digital-text&sr=1-2)」を中心に、書籍などから課題を出します。 この課題をこなすことがのトレーニングのゴールです。
+課題はGitHubでPull Requestの形で提出することで「やり終えた」感を得られるようにしています。
 
 提出する際にはこのレポジトリを個人のレポジトリとしてForkして下さい。
 課題一つ一つの提出をPull Requestとして挙げて下さい。Pull RequestのApprovalをもって課題完了の確認とします。
-
-課題は「研修内容のポリシー」(後述)、「目、耳、手を全部使う」の中の「手を」使うトレーニングです。手を動かさないと知識は定着しませんが、手を動かすだけでも定着しないので、他の社員に聞く、後のページで紹介する書籍を読むなどして知識を補強してください。わからなかったらすぐに他の社員に聞く、後で書籍をよむ、という順番がオススメです。
 
 ## この課題で身につく能力
 
