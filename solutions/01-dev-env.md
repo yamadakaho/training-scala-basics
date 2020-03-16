@@ -22,7 +22,7 @@ Go言語やJava、CやJavaScriptなど様々な言語でそれぞれ別のPlaygr
 
 ![image](https://user-images.githubusercontent.com/7414320/76193460-6373c700-6227-11ea-8f6d-0a3cc8997b46.png)
 
-2. 自分のローカルPCのコマンドライン/ターミナルからScala REPLから`println("Hello World")`を実行して結果をコピペもしくはスクリーンショットで貼り付けてください
+2. 自分のローカルPCのコマンドライン/ターミナルからScala REPLから`println("Hello World")`を実行して結果を文字コピペもしくはスクリーンショットで貼り付けてください
   - 2.1 Adopt Open JDK 8をインストールしてください
   - 2.2 Scalaをインストールしてください
   - 2.3 scalaコマンドでREPLを立ち上げて下さい

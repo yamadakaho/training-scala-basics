@@ -4,6 +4,8 @@ Option、Either、Exceptionを使ってエラー表現できる
 
 ## 課題
 
+以下の課題の結果をこのファイルに貼り付けて、Pull Requestを送る形で提出してください
+
 1. 「実践Scala入門」第2章p.81 throw式、の`RuntimeException`を投げるコードを実行して結果を貼り付けて下さい。
   - 1.1 REPLから実行して下さい
   - 1.2 IDEから実行して下さい

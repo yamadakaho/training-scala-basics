@@ -4,6 +4,8 @@ Futureを使った非同期処理を含むソースコードが読め、スレ�
 
 ## 課題
 
+以下の課題の結果をこのファイルに貼り付けて、Pull Requestを送る形で提出してください
+
 1. Oracle Java Tutorialsの[Defining and Starting a Thread](https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html)のコード例を、IDEからScalaで実装して実行結果を貼り付けて下さい。
 
 2. Oracle Java Tutorialsの[Pausing Execution with Sleep](https://docs.oracle.com/javase/tutorial/essential/concurrency/sleep.html)のコード例を、IDEからScalaで実装して実行結果を貼り付けて下さい。

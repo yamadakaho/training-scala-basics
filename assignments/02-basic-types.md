@@ -4,6 +4,8 @@
 
 ## 課題
 
+以下の課題の結果をこのファイルに貼り付けて、Pull Requestを送る形で提出してください
+
 1. 実践Scala入門第２章、Int、Long、Short、Char、Double、Floaｔ、Booleanの例をREPLで実行し、結果をコピペで貼り付けて下さい
 
 2. 実践Scala入門第２章、Stringの単一行文字リテラル、複数行文字リテラル、stripMargin、文字列補間のコード例をREPLで実行し、結果をコピペで貼り付けて下さい
