@@ -7,24 +7,42 @@
 1. IDEを使って新しいプロジェクトを作り、その中でMainクラスを定義し、ソースコードとプロジェクト・ディレクトリの階層構造をを貼り付けて提出して下さい
 
 これは何も見なくても書けるくらいになってください。これがすぐに書けないと「IDEで動作確認するの面倒だなー」となって、ソースコードの動作確認をする頻度が減ります。
-ある程度複雑なコードはどうしてもIDEから動作確認する必要があるため、そのハードルをすこしでも下げられるよう手を慣らして下さい。
+ある程度規模の大きなコードはREPLやPlayGroundではどうしても動かしづらく、どうしてもIDEから動作確認する必要があるため、その心理的ハードルをすこしでも下げられるよう手を慣らして下さい。
 
-```
+```scala
 object Main{
   def main(args: Array[String]): Unit = {
   }
 }
 ```
 
-2. 実践Scala入門第２章「クラスを定義する」のPointクラスを定義して下さい。(55ページ「先回りして例示しておくと…」直後です) 
+![image](https://user-images.githubusercontent.com/7414320/76871319-3de16000-68ae-11ea-9001-42c718a1f5e9.png)
 
-本のコードそのままなので答え省略。提出の際ははしっかりコードを書いて下さい。
+2. 「実践Scala入門」第2章p.54 -> p.55「クラスを定義する」のPointクラスを定義して下さい。(p.55「先回りして例示しておくと…」直後です) 
 
-3. 実践Scala入門第２章「クラスを定義する」のPointクラスを利用するコード（５５ページ「まず、先程あげたPointを定義することについて考えてみましょう…」直後です）をMainクラスのmain関数の中で呼び出して、実行結果を貼り付けて下さい
+答えは書籍に載っているので省略します。提出の際は必ず自分で実行した結果を貼り付けてください。
 
-本のコードそのままなので答え省略。提出の際ははしっかりコードを書いて下さい。
+3. 「実践Scala入門」第2章p.54 -> p.55「クラスを定義する」の (p.55「まず、先程あげたPointを定義することについて考えてみましょう…」直後です）を 上記課題1. のMainクラスのmain関数の中で呼び出して、実行結果を貼り付けて下さい
 
-4. 3.で定義したPointクラスを利用して、Triangleクラスとそのメソッド`def area: Double`を実装して下さい
-  - 4.1 Point３つをフィールドに持つクラスです
-  - 4.2 Point(1,2),(3,4),(0,0)の３頂点をもつ三角形の面積を求めるコードを書いて下さい。答えは面積 = 1です。 https://mathwords.net/x1y2hikux2y1
-  - 4.3 Point(5,7),(3,4),(1,2)の３頂点をもつ三角形の面積を求めるコードを書いて下さい。答えは面積 = 1です。 https://mathwords.net/x1y2hikux2y1
+答えは書籍に載っているので省略します。提出の際は必ず自分で実行した結果を貼り付けてください。
+
+4. 3.で定義したPointクラスを参考に、xとy座標のみを持つPoint2Dクラスを定義して、TriangleAreaクラスとそのメソッド`def area: Double`を実装して下さい
+  - 4.1 TriangleAreaクラスはPoint2Dを3つフィールドに持つクラスです
+  - 4.2 Point2D(1,2),Point2D(3,4),Point2D(0,0)の３頂点をもつ三角形の面積を求めるコードを書いて下さい。答えは面積 = 1です。 https://mathwords.net/x1y2hikux2y1
+  - 4.3 Point2D(5,7),Point2D(3,4),Point2D(1,2)の３頂点をもつ三角形の面積を求めるコードを書いて下さい。答えは面積 = 1です。 https://mathwords.net/x1y2hikux2y1
+
+```scala
+class Point2D(val x: Int, val y: Int)
+
+class TriangleArea(p1: Point2D, p2: Point2D, p3: Point2D) {
+  def area: Double = Math.abs((p1.x-p3.x)*(p2.y-p3.y) - (p2.x-p3.x)*(p1.y-p3.y)) / 2.0
+}
+
+val firstTriangle = new TriangleArea(new Point2D(1, 2), new Point2D(3, 4), new Point2D(0,0))
+//結果: 1.0
+println(firstTriangle.area) 
+
+val secondTriangle = new TriangleArea(new Point2D(5, 7), new Point2D(3, 4), new Point2D(1,2))
+//結果: 1.0
+println(secondTriangle.area)
+```
