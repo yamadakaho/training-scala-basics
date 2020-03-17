@@ -30,14 +30,15 @@ Go言語やJava、CやJavaScriptなど様々な言語でそれぞれ別のPlaygr
 解答)
 [Scala公式](https://www.scala-lang.org/download/)にも書いてあるのですが、Scalaをインストールするには先にJDKをインストールしておく必要があります。
 ところが2020年現在、これが少し厄介な状況になっていて、少し古いバージョンである**JDK 8**でないといけません。
-ScalaのコンパイラがJDK 8を前提としてるためで、JDK 9以降でScalaコンパイラを実行するとごくまれにエラーが起きる場合があります。(ほとんどの場合は問題なく動くらしい)。
-そしてJavaのサポートモデルが変わったためにOpen JDK本家のサポートは切れてしまっており、Adopt Open JDKなど他のベンダから配布されているJDK 8を入手する必要があります。
+[ScalaのコンパイラがJDK 8を前提としている](https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html)ためで、JDK 9以降でScalaコンパイラを実行するとごくまれにエラーが起きる場合があります。(ほとんどの場合は問題なく動くらしい)。
 
-そこで2.1の手順は以下のようになります。
+> We recommend using Java 8 for compiling Scala code. Since the JVM is backward compatible, it is usually safe to use a newer JVM to run your code compiled by the Scala compiler for older JVM versions
+
+そしてJavaのサポートモデルが変わったためにOpen JDK本家のサポートは切れてしまっており、Adopt Open JDKなど他のベンダから配布されているJDK 8を入手する必要があります。そこで2.1の手順は以下のようになります。
 
 ```
 # java がインストールされていないことを確認、ここでエラーが出るはず
-# javaがすでにインストールされていたら、アンインストールするか、もしくは後述のjenvを使う
+# javaがすでにインストールされていたら、アンインストールするか、もしくは後述のjenvで複数バージョンのJDKを管理する
 > java -version
 
 ## brew自体のインストール https://brew.sh/
@@ -53,9 +54,9 @@ OpenJDK Runtime Environment (AdoptOpenJDK)(build 1.8.0_242-b08)
 OpenJDK 64-Bit Server VM (AdoptOpenJDK)(build 25.242-b08, mixed mode)
 ```
 
-Javaがすでにインストールされていて、そのJavaはそのまま残して起きたいならjenvを使って複数のJavaバージョンを切り替えるとよい。PyenvのJava版みたいな感じか？公式ページと公式GitHubの情報に従ってインストールすれば動いた。Qiitaとかはいつもどおり当てにならない。詳細はここでは省く。
+Javaがすでにインストールされていて、そのJavaはそのまま残して起きたいならjenvを使って複数のJavaバージョンを切り替えるとよいでしょう。詳細な使い方はここでは說明しませんが、公式ページを皆が裂蹄すれば動きます。
 
-2.2 は
+2.2, 2.3 は
 
 ```
 # Scalaのインストールは単純にこれだけ
