@@ -20,7 +20,7 @@ abstract class Shape {
 
 4. 以下のクラス図をもとにtraitとclassを定義してください。それぞれのクラスでのrunメソッドは以下の文字列をprintlnで出力するよう実装し、クラスの定義と実装結果を貼り付けて提出してください。
 
-![Image from iOS (33)](https://user-images.githubusercontent.com/7414320/76874598-bf3af180-68b2-11ea-8659-b076dd4f29d0.jpg)
+<img width=400 src="https://user-images.githubusercontent.com/7414320/76874598-bf3af180-68b2-11ea-8659-b076dd4f29d0.jpg" />
 
 ```scala
 class Cat:           // "I can run at 48km/h" 
