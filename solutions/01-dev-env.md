@@ -56,9 +56,9 @@ OpenJDK Runtime Environment (AdoptOpenJDK)(build 1.8.0_242-b08)
 OpenJDK 64-Bit Server VM (AdoptOpenJDK)(build 25.242-b08, mixed mode)
 ```
 
-Javaがすでにインストールされていて、そのJavaはそのまま残して起きたいならjenvを使って複数のJavaバージョンを切り替えるとよいでしょう。詳細な使い方はここでは說明しませんが、公式ページを皆が裂蹄すれば動きます。
+自分のローカル開発環境にJavaがすでにインストールされていて、そのJavaはそのまま残して起きたいならjenvを使って複数のJavaバージョンを切り替えるとよいでしょう。詳細な使い方はここでは說明しませんが、公式ページの案内に従えば動きます。(Macbookでは`.bashrc`の設定で多少苦労したもの、ちゃんと動きました。)
 
-2.2, 2.3 は
+課題2.2, 2.3 は
 
 ```
 # Scalaのインストールは単純にこれだけ
@@ -79,11 +79,39 @@ Hello World
  - 3.1 sbtをインストールして下さい
  - 3.2 IntelliJ IDEAをインストールして下さい
  
- ```
- # 3.1 sbtをインストールして下さい
- brew install sbt
- ```
- 
+解答)
+
+```
+# 3.1 sbtをインストールして下さい
+brew install sbt
+```
+
+sbt newコマンドでIDEで開くことのできるScalaプロジェクトの雛形をつくります。
+
+```
+sbt new scala/scala-seed.g8
+//この後ターミナル/コンソールでいくつかの質問に対する答えを入力する
+```
+
+出来上がるプロジェクト雛形の構成はこのような感じです。
+
+```
+project-root-dir
+  +-project
+  | +-build.properties
+  |
+  +-src
+  | +-main
+  |   +-scala
+  |     +-example
+  |       +-Example.scala
+  +-test
+  +-build.sbt
+```
+
+Example.scalaのファイル名をMain.scalaに書き換えましょう。必須ではなく、好みの問題ですが私はMain.scalaの方が好きです。
+次にMain.scalaの中身をこのように書き換えましょう。
+
 3.2 IntelliJ IDEAはこちらからダウンロード。無料版で大丈夫です。 https://www.jetbrains.com/idea/
 
 ```
