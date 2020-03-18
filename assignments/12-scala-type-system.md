@@ -12,7 +12,7 @@
 
 2. `null`の型は何でしょう？
 
-3. `Exception`, `AnyRef`, `AnyVal`, `Any`の4つについてexctendsを使ってそれぞれの関係を表して下さい
+3. `Exception`, `AnyRef`, `Any`の3つについてexctendsを使ってそれぞれの関係を表して下さい
  - XXXXX exnteds YYYYY, YYYYYY extends ZZZZZZのように
 
 4. `Nil`はどういう用途で使われるものですか？この答えは実践Scala入門第２章にはありません。
