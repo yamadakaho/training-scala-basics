@@ -15,4 +15,4 @@
 3. `Exception`, `AnyRef`, `Any`の3つについてexctendsを使ってそれぞれの関係を表して下さい
  - XXXXX exnteds YYYYY, YYYYYY extends ZZZZZZのように
 
-4. `Nil`はどういう用途で使われるものですか？この答えは実践Scala入門第２章にはありません。
+4. `Nil`, `None`, `Nothing` はそれぞれどういう用途で使われるものですか？この答えは実践Scala入門第２章にはありません。
