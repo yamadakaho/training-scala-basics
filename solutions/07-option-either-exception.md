@@ -6,6 +6,7 @@ Option、Either、Exceptionを使ってエラー表現できる
 
 以下の課題の結果をこのファイルに貼り付けて、Pull Requestを送る形で提出してください
 
+---
 1. 「実践Scala入門」第2章p.81 throw式、の`RuntimeException`を投げるコードを実行して結果を貼り付けて下さい。
   - 1.1 REPLから実行して下さい
   - 1.2 IDEでプロジェクトをセットアップし、ターミナル/コンソールからプロジェクトディレクトリに移動し、sbtから実行して下さい
@@ -35,12 +36,14 @@ java.lang.RuntimeException: exception
 [error] Total time: 4 s, completed Mar 18, 2020, 11:20:09 PM
 ```
 
+---
 2. 「実践Scala入門」第2章 p.81 try式のコード例ひとつめを実行して結果を貼り付けて下さい。
   - 「以下のようなコードで、例外を補足できます。(RuntimeExceptionを投げるのはあまりよいことではありませんが)」の直後、
   - 「より一般的には次のような構文になります」の直前です
 
 答えは書籍に載っているので省略します。提出の際は必ず自分で実行した結果を貼り付けてください。
 
+---
 3. 「実践Scala入門」第2章 p.80 例外機構のJavaコード例、`public class UsingException`をIDE上でScalaに直し、ターミナル/コンソールから実行して下さい。
   - sbtでMain関数に引数を渡すには`sbt run 1`や`sbt run 0`のようにしてください
   - Javaの`public static`はScalaの`object`(コンパニオンオブジェクト)を使えば同等の使い方が出来ます
@@ -106,10 +109,12 @@ sbt:my-proj> run 0
 java.lang.Exception: divided by zero
 ```
 
+---
 4. 「実践Scala入門」第3章 p.103のコード例3つを全てREPLから実行して結果を貼り付けて下さい 
 
 答えは書籍に載っているので省略します。提出の際は必ず自分で実行した結果を貼り付けてください。
 
+---
 5. 「実践Scala入門」第2章 p.80 例外機構のJavaコード例、`public class UsingException`をIDE上でOptionを使ってScalaに直し、ターミナル/コンソールから実行して下さい。
   - 例外を投げるかわりに`None`を返します
   - `return m/n`を返すかわりに`Some（m／n）`を返します
@@ -149,6 +154,7 @@ divided by zero
 [success] Total time: 1 s, completed Mar 19, 2020, 12:02:28 AM
 ```
 
+---
 6. [Scala 公式APIドキュメント Either](https://www.scala-lang.org/api/2.13.0/scala/util/Either.html)のコード例
 より、IDEから以下のコードをもつmainクラス/メソッドを作って実行して下さい。`readLine`に渡すターミナル/コンソールからの入力は`1`, `2`, `abc`, です。結果を貼り付けて下さい。
 

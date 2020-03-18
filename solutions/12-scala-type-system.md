@@ -11,8 +11,10 @@ ScalaにはNothingなど独特の型があり、他の言語に慣れ親しん�
 
 実践Scala入門第２章 p.40 -> ... を読んで以下の問に答えて下さい
 
+---
 1. Unitのスーパータイプは`AnyVal`と`AnyRef`どちらでしょう？
 
+---
 2. `null`の型は何でしょう？
 
 `null`の型は`Null`です。
@@ -35,9 +37,11 @@ scala> val a: Int = null
        error: an expression of type Null is ineligible for implicit conversion
 ```
 
+---
 3. `Exception`, `AnyRef`, `Any`の3つについてexctendsを使ってそれぞれの関係を表して下さい
  - XXXXX exnteds YYYYY, YYYYYY extends ZZZZZZのように
 
+---
 4. `Nil`, `None`, `Nothing` はそれぞれどういう用途で使われるものですか？この答えは実践Scala入門第２章にはありません。
 
 これら３つは似たような名前なので混同しないようにしましょう。
