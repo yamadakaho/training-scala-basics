@@ -9,10 +9,12 @@
 ---
 1. 「実践Scala入門」第2章p.59 -> p.60、「クラスの継承」にあるShape, Triangle, Rectangle, UnknownShapeの定義およびそれらの`def shape`メソッドを呼び出すコードを書いて呼び出し結果を貼り付けて下さい
 
-答えは書籍に載っているので省略します。提出の際は必ず自分で実行した結果を貼り付けてください。
+解答) 答えは書籍に載っているので省略します。提出の際は必ず自分で実行した結果を貼り付けてください。
 
 ---
 2. 上記1. Shapeのインスタンスを直接newしてコンパイルエラーが発生するのを確認して下さい
+
+解答) 
 
 ```scala
 val shape = new Shape
@@ -33,12 +35,12 @@ class Shape {
 }
 ```
 
-上記2.で発生したエラーが消えるはず
+解答) 上記2.で発生したエラーが消えるはず
 
 ---
 4. 以下のクラス図をもとにtraitとclassを定義してください。それぞれのクラスでのrunメソッドは以下の文字列をprintlnで出力するよう実装し、クラスの定義と実装結果を貼り付けて提出してください。
 
-![Image from iOS (33)](https://user-images.githubusercontent.com/7414320/76874598-bf3af180-68b2-11ea-8659-b076dd4f29d0.jpg)
+<img width=400 src="https://user-images.githubusercontent.com/7414320/76874598-bf3af180-68b2-11ea-8659-b076dd4f29d0.jpg" />
 
 ```scala
 class Cat:           // "I can run at 48km/h" 
@@ -47,7 +49,7 @@ class Human:         // "20 km/h isn't so bad actually"
 class OlympicAthlete // "40 km/h at maximum" 
 ```
 
-答えは以下です。
+解答) 
 
 ```scala
 trait Animal {
