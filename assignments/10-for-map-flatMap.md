@@ -10,8 +10,20 @@ forをmapとflatMapに手書き展開できる
 
 2. コップ本「Scalaスケーラブルプログラミング 第３版」 p.446 -> p.450 の23.4「for式の変換」のコード例を全て実行し、結果を貼り付けて下さい
 
-3. `val a = Some("a string")`, `val b = Some("b string")`を含むfor loopを作成し、Someの内側のStringをprintlnで表示してください
+3. `Some("100")`を含むfor loop(一重のfor loop)を作成し、Someの内側のStringをprintlnで表示してください
 
-4. `val a = Some("a string")`, `val b = Some("b string")` `val c = None`を含むfor loopを作成し、3.同様動作を確かめて下さい
+4. 下記のコードを実行し、結果を貼り付けるとともに、`a`, `b`, `c`, `result`の型を答えて下さい。
+
+```scala
+def doubleTheNumber(i: Int) = i * 2
+
+val result = for (
+    a <- Some("100")
+    b <- Some(a.toInt)
+    c <- Some(doubleTheNumber(b))
+) yield c * 5
+
+println(result)
+```
 
 5. 上記3.と4.をそれぞれmapとflatMapを使って書き下してください
