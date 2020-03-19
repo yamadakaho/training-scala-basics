@@ -14,6 +14,8 @@ ScalaにはNothingなど独特の型があり、他の言語に慣れ親しん�
 ---
 1. Unitのスーパータイプは`AnyVal`と`AnyRef`どちらでしょう？
 
+解答) Unitのスーパータープは`AnyVal`です。Unit型は副作用を伴うメソッド/関数の戻り値として使われ、Unit型の値は`()`という単一の値のみが許されています。
+
 ---
 2. `null`の型は何でしょう？
 
@@ -29,6 +31,10 @@ scala> val a: MyClass = null
 a: MyClass = null
 ```
 
+つまり参照型である限りはどんな型でも、`null`を値としてもつことができます。これはJavaの動作とも一貫性がありますね。
+ただし、Scalaでは`Option`があるため、意図的に`null`を紛れ込ませない限り、直接`null`がソースコードに現れることはないでしょう。
+Javaのライブラリを使うときには`null`が使われていることもよくあります。
+
 一方Intは参照型ではないので、エラーになってしまいます。少しエラーメッセージはわかりづらくなっていますが、これは型が合わないためのエラーです。
 
 ```
@@ -40,6 +46,18 @@ scala> val a: Int = null
 ---
 3. `Exception`, `AnyRef`, `Any`の3つについてexctendsを使ってそれぞれの関係を表して下さい
  - XXXXX exnteds YYYYY, YYYYYY extends ZZZZZZのように
+
+解答) 
+```scala
+Exception extends AnyRef
+AnyRef extends Any
+
+|-----------|  extends   |--------|   extends   |-----|
+| Exception | ---------> | AnyRef |  ---------> | Any |
+|-----------|            |--------|             |-----|
+```
+
+ExceptionとNothingの関係は次の課題でも触れられています。書籍の情報と合わせてしっかり把握するよう心がけて下さい。
 
 ---
 4. `Nil`, `None`, `Nothing` はそれぞれどういう用途で使われるものですか？この答えは実践Scala入門第２章にはありません。
