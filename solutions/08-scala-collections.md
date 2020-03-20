@@ -85,6 +85,11 @@ case class :: [+A](head: A, next: List[A]) extends List[A] {
 
 `case class :: [+A](head: A, next: List[A])`とあるようにheadはメンバとして保持しているので定数時間でアクセスできます。
 tailは「最後の要素」ではなく、先頭要素を除いた残りのListを返すことに注意してください。tailも同じく定数時間です。
+
+```scala
+override def tail: List[A] = next
+```
+
 `apply(i)`はi番目の要素へのアクセスで、applyは図を見てわかるように、tailのtailのtailの…と順番にたどっていかなくてはならないため、線形時間のアクセスになります。
 
 先頭に追加はListの一番「外側」を一つ付け足すだけでよいので定数時間で、最後に追加の場合は下図のようにListを全て作り直しなので線形時間がかかります。
