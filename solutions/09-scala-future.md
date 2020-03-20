@@ -141,7 +141,7 @@ we've been interrupted on Thread[Thread-5,5,run-main-group-4]. no more println. 
 ends main Thread[run-main-4,5,run-main-group-4]
 ```
 
-<img width=600 src="https://user-images.githubusercontent.com/7414320/77151759-00611a80-6ada-11ea-94d4-3e646936a8d7.jpg" />
+<img width=800 src="https://user-images.githubusercontent.com/7414320/77151759-00611a80-6ada-11ea-94d4-3e646936a8d7.jpg" />
 
 
 ---
@@ -152,19 +152,15 @@ ends main Thread[run-main-4,5,run-main-group-4]
 
 [Java 5.0時代の非同期処理技術から学び直すScala/Java非同期処理](https://speakerdeck.com/richardimaokajp/javafei-tong-qi-chu-li?slide=28)に最適な図がります。
 
-<img width=400 src="https://user-images.githubusercontent.com/7414320/77151689-d27bd600-6ad9-11ea-9efa-586b9f723d79.png" />
-<img width=400 src="https://user-images.githubusercontent.com/7414320/77151687-d14aa900-6ad9-11ea-928c-e297da8ca595.png" />
-<img width=400 src="https://user-images.githubusercontent.com/7414320/77176553-9bbcb480-6b07-11ea-82f4-4e2892143968.png" />
+<img width=400 src="https://user-images.githubusercontent.com/7414320/77179613-0bcd3980-6b0c-11ea-9f28-c71aaa0a18e5.png" /> <img width=400 src="https://user-images.githubusercontent.com/7414320/77179607-0a9c0c80-6b0c-11ea-967a-f7236d502ae2.png" /> <img width=400 src="https://user-images.githubusercontent.com/7414320/77176553-9bbcb480-6b07-11ea-82f4-4e2892143968.png" />
 
 ---
 6. 口頭試問: Oracle Java Tutorialsの[Memory Consistency Errors](https://docs.oracle.com/javase/tutorial/essential/concurrency/memconsist.html)について図を描いて説明して下さい。コード例を実行しないのは、現代のCPUは速すぎてMemory Consistency Errorsを再現するのは難しいからです。
 
 [Java 5.0時代の非同期処理技術から学び直すScala/Java非同期処理](https://speakerdeck.com/richardimaokajp/javafei-tong-qi-chu-li?slide=33)に最適な図がります。
 
-<img width=400 src="https://user-images.githubusercontent.com/7414320/77151269-ed017f80-6ad8-11ea-94a3-019a1a7947d9.png" />
-<img width=400 src="https://user-images.githubusercontent.com/7414320/77151271-ee32ac80-6ad8-11ea-9fd8-15a210d26b22.png" />
-<img width=400 src="https://user-images.githubusercontent.com/7414320/77151278-eecb4300-6ad8-11ea-9bab-5cfc7e55ec1e.png" />
-<img width=400 src="https://user-images.githubusercontent.com/7414320/77151259-e8d56200-6ad8-11ea-867f-380c11531fe1.png" />
+<img width=400 src="https://user-images.githubusercontent.com/7414320/77179067-526e6400-6b0b-11ea-9f32-758978953386.png" /> <img width=400 src="https://user-images.githubusercontent.com/7414320/77179084-58fcdb80-6b0b-11ea-9181-882dfccc449b.png" /> <img width=400 src="https://user-images.githubusercontent.com/7414320/77179094-5b5f3580-6b0b-11ea-8f2f-bc5004db1f04.png" /> <img width=400 src="https://user-images.githubusercontent.com/7414320/77179061-50a4a080-6b0b-11ea-9ccf-10b419a274f6.png" />
+
 
 ---
 7. 「実践Scala入門」第5章「5-2 Futureの基本的な使い方」から以下に挙げたコードを全部実行して結果を貼り付けて下さい
@@ -196,10 +192,10 @@ Executor, ExecutorService, ThreadPoolExecutor, ForkJoinPoolExecutorはJava時代
 
 
 ```                       
-|---------------------|                  |----------|             |-----------|
-| class               |  implements      | interface|   extends   | interface |
-| ThreadPoolExecutor  | ---------------> | Executor |  ---------> | Executor  |
-|---------------------|             ---> |----------|             |-----------|
+|---------------------|                  |-----------------|             |-----------|
+| class               |  implements      | interface       |   extends   | interface |
+| ThreadPoolExecutor  | ---------------> | ExecutorService |  ---------> | Executor  |
+|---------------------|             ---> |-----------------|             |-----------|
                                     |
 |---------------------|             |
 | class               |  implements |
