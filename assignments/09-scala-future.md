@@ -14,9 +14,10 @@ Futureを使った非同期処理を含むソースコードが読め、スレ�
 
 4. Oracle Java Tutorialsの[The Simple Threads Example](https://docs.oracle.com/javase/tutorial/essential/concurrency/simple.html)のコード例を、IDEからScalaで実装して実行結果を貼り付けて下さい。
 
-5. Oracle Java Tutorialsの[Thread Intereference](https://docs.oracle.com/javase/tutorial/essential/concurrency/interfere.html)について図を描いて説明して下さい。コード例は実行しません、なぜなら現代のCPUは速すぎてThread Interferenceを再現するのは難しいからです。
+5. 口頭試問: Oracle Java Tutorialsの[Thread Intereference](https://docs.oracle.com/javase/tutorial/essential/concurrency/interfere.html)について図を描いて説明して下さい。コード例は実行しません、なぜなら現代のCPUは速すぎてThread Interferenceを再現するのは難しいからです。
 
-6. Oracle Java Tutorialsの[Memory Consistency Errors](https://docs.oracle.com/javase/tutorial/essential/concurrency/memconsist.html)について図を描いて説明して下さい。コード例を実行しないのは、現代のCPUは速すぎてThread Interferenceを再現するのは難しいからです。
+6. 口頭試問: Oracle Java Tutorialsの[Memory Consistency Errors](https://docs.oracle.com/javase/tutorial/essential/concurrency/memconsist.html)について図を描いて説明して下さい。コード例を実行しないのは、現代のCPUは速すぎてMemory Consistency Errorsを再現するのは難しいからです。
+
 
 7. 「実践Scala入門」第5章「5-2 Futureの基本的な使い方」から以下に挙げたコードを全部実行して結果を貼り付けて下さい
   - HttpTextClient (p.162)
