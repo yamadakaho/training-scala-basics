@@ -58,8 +58,52 @@ case object Nil extends List[Nothing] {
   - Mapのapplyメソッド(p.147では`priceList("Banana")`)とMapのgetメソッドの戻り値の違いを確認して下さい
 
 解答) 答えは書籍に載っているので省略します。提出の際は必ず自分で実行した結果を貼り付けてください。
+「Mapのapplyメソッド(p.147では`priceList("Banana")`)とMapのgetメソッドの戻り値の違い」はapplyは存在しないキーをパラメタとして渡すと、NuSuchElementExceptionがなげられるのに対し、
+getはOptionのNoneが返ってExceptionは投げられない点です。
 
 ---
-6. 口頭試問: 「実践Scala入門」第4章 「4-3コレクションの実装ごとの性能特性」を図を描きながら説明し、なぜデータ構造の実装が表でまとめられた性能特性を持つのか、表の一部分だけでいいのでわかるところについて説明してください。
+6. 口頭試問: 「実践Scala入門」第4章 p.151 「4-3コレクションの実装ごとの性能特性」を図を描きながら説明し、なぜデータ構造の実装が表でまとめられた性能特性を持つのか、表の一部分だけでいいのでわかるところについて説明してください。
+- Listのhead/tail/apply/先頭に追加/最後に追加
+- Vectorのhead/tail/apply/先頭に追加/最後に追加
+- HashSetの検索を説明できれば十分でしょう。
 
-Listのhead/tail/apply/先頭に追加/最後に追加
+解答) Listの実態はScala本体では`::`という少し変わった名前のクラスで、以下のように定義されています。
+
+```scala
+case class :: [+A](head: A, next: List[A]) extends List[A] { 
+  override def tail: List[A] = next
+  ... 
+}
+```
+
+`::`は関数型プログラミングの世界でListデータ構造を表す記号として広く使われ、"Cons"という呼び方をします。
+上記より、Listの実態`::`を図で表すと以下のようになります。
+
+TODO: 図
+
+つまり`List(1,2,3)`は実際には`::(1, ::(2, ::(3)))`となっています。
+
+`case class :: [+A](head: A, next: List[A])`とあるようにheadはメンバとして保持しているので定数時間でアクセスできます。
+tailは「最後の要素」ではなく、先頭要素を除いた残りのListを返すことに注意してください。tailも同じく定数時間です。
+`apply(i)`はi番目の要素へのアクセスで、applyは図を見てわかるように、tailのtailのtailの…と順番にたどっていかなくてはならないため、線形時間のアクセスになります。
+
+TODO: 図
+
+先頭に追加はListの一番「外側」を一つ付け足すだけでよいので定数時間で、
+
+TODO: 図
+
+最後に追加の場合はListを全て作り直しなので線形時間がかかります。
+
+次にVectorの性能特性です。Vectorは木構造として定義されています。
+
+> Vectors are represented as broad, shallow trees. Every tree node contains up to 32 elements of the vector or contains up to 32 other tree nodes
+
+TODO: 図
+
+Vectorはhead/tail/apply/の3つ、つまりVector内のどのElementへのアクセスも「実質定数」時間で終わります。
+コップ本「Scalaスケーラブルプログラミング 第3版」24章より引用。
+
+> Vectors with up to 32 elements can be represented in a single node. Vectors with up to 32 * 32 = 1024 elements can be represented with a single indirection. Two hops from the root of the tree to the final element node are sufficient for vectors with up to 215 elements, three hops for vectors with 220, four hops for vectors with 225 elements and five hops for vectors with up to 230 elements.
+
+HashSetに関しては https://en.wikipedia.org/wiki/Hash_table が図も含めてわかりやすく書いてあります。一般的なHash Tableの解説なので、ScalaのHashSetの実装とは違うと思いますが、似ている部分もあるのでサラッとWikipediaの記事を読み流してみるといいでしょう。
