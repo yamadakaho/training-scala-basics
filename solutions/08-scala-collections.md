@@ -92,6 +92,8 @@ override def tail: List[A] = next
 
 `apply(i)`はi番目の要素へのアクセスで、applyは図を見てわかるように、tailのtailのtailの…と順番にたどっていかなくてはならないため、線形時間のアクセスになります。
 
+<img width=400 src="https://user-images.githubusercontent.com/7414320/77143178-cb4acd00-6ac5-11ea-8ce8-23f27c242d0a.jpg" />
+
 先頭に追加はListの一番「外側」を一つ付け足すだけでよいので定数時間で、最後に追加の場合は下図のようにListを全て作り直しなので線形時間がかかります。
 
 <img width=400 src="https://user-images.githubusercontent.com/7414320/77142564-d997e980-6ac3-11ea-9ed0-5e11c5795ac0.jpg" />
