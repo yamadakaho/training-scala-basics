@@ -27,10 +27,12 @@ if/else、パターンマッチを使える
 simplifyTop(UnOp("-", Var("x")))
 simplifyTop(UnOp("-", UnOp("-", Var("x"))))
 simplifyTop(BinOp("+", Number(1), Number(2)))
-simplifyTop(BinOp("+", Number(3), Number(1)))
+simplifyTop(BinOp("+", Number(1), Number(0)))
 simplifyTop(BinOp("*", Number(7), Number(8)))
+simplifyTop(BinOp("*", Number(7), Number(1)))
 
-val e1 = BinOp("*", Number(1), Number(3))
+val e1 = BinOp("*", Number(3), Number(1))
 val e2 = BinOp("+", Number(4), Number(0))
-simplifyTop(BinOp("*", e1, e2))
+simplifyTop(BinOp("*", simplifyTop(e1), simplifyTop(e2)))
 ```
+
