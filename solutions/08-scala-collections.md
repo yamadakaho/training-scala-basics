@@ -79,21 +79,17 @@ case class :: [+A](head: A, next: List[A]) extends List[A] {
 `::`は関数型プログラミングの世界でListデータ構造を表す記号として広く使われ、"Cons"という呼び方をします。
 上記より、Listの実態`::`を図で表すと以下のようになります。
 
+<img width=400 src="https://user-images.githubusercontent.com/7414320/77142099-722d6a00-6ac2-11ea-8e7c-3bc97bd9bcd5.png" />
+
 つまり`List("a","b","c")`は実際には`::("a", ::("b", ::("c", Nil )))`となっています。
 
 `case class :: [+A](head: A, next: List[A])`とあるようにheadはメンバとして保持しているので定数時間でアクセスできます。
 tailは「最後の要素」ではなく、先頭要素を除いた残りのListを返すことに注意してください。tailも同じく定数時間です。
 `apply(i)`はi番目の要素へのアクセスで、applyは図を見てわかるように、tailのtailのtailの…と順番にたどっていかなくてはならないため、線形時間のアクセスになります。
 
-<img width=400 src="https://user-images.githubusercontent.com/7414320/77142099-722d6a00-6ac2-11ea-8e7c-3bc97bd9bcd5.png" />
-
-先頭に追加はListの一番「外側」を一つ付け足すだけでよいので定数時間で、
+先頭に追加はListの一番「外側」を一つ付け足すだけでよいので定数時間で、最後に追加の場合は下図のようにListを全て作り直しなので線形時間がかかります。
 
 <img width=400 src="https://user-images.githubusercontent.com/7414320/77142564-d997e980-6ac3-11ea-9ed0-5e11c5795ac0.jpg" />
-1.最後に追加される要素"d"のみにListを作る
-2."c"を先頭に追加
-
-最後に追加の場合はListを全て作り直しなので線形時間がかかります。
 
 次にVectorの性能特性です。Vectorは木構造として定義されています。
 
