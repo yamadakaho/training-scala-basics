@@ -79,19 +79,19 @@ case class :: [+A](head: A, next: List[A]) extends List[A] {
 `::`は関数型プログラミングの世界でListデータ構造を表す記号として広く使われ、"Cons"という呼び方をします。
 上記より、Listの実態`::`を図で表すと以下のようになります。
 
-TODO: 図
-
-つまり`List(1,2,3)`は実際には`::(1, ::(2, ::(3)))`となっています。
+つまり`List("a","b","c")`は実際には`::("a", ::("b", ::("c", Nil )))`となっています。
 
 `case class :: [+A](head: A, next: List[A])`とあるようにheadはメンバとして保持しているので定数時間でアクセスできます。
 tailは「最後の要素」ではなく、先頭要素を除いた残りのListを返すことに注意してください。tailも同じく定数時間です。
 `apply(i)`はi番目の要素へのアクセスで、applyは図を見てわかるように、tailのtailのtailの…と順番にたどっていかなくてはならないため、線形時間のアクセスになります。
 
-TODO: 図
+<img width=400 src="https://user-images.githubusercontent.com/7414320/77142099-722d6a00-6ac2-11ea-8e7c-3bc97bd9bcd5.png" />
 
 先頭に追加はListの一番「外側」を一つ付け足すだけでよいので定数時間で、
 
-TODO: 図
+<img width=400 src="https://user-images.githubusercontent.com/7414320/77142564-d997e980-6ac3-11ea-9ed0-5e11c5795ac0.jpg" />
+1.最後に追加される要素"d"のみにListを作る
+2."c"を先頭に追加
 
 最後に追加の場合はListを全て作り直しなので線形時間がかかります。
 
@@ -99,7 +99,7 @@ TODO: 図
 
 > Vectors are represented as broad, shallow trees. Every tree node contains up to 32 elements of the vector or contains up to 32 other tree nodes
 
-TODO: 図
+<img width=400 src="https://user-images.githubusercontent.com/7414320/77142565-dac91680-6ac3-11ea-82eb-f47232c3d41e.jpg" />
 
 Vectorはhead/tail/apply/の3つ、つまりVector内のどのElementへのアクセスも「実質定数」時間で終わります。
 コップ本「Scalaスケーラブルプログラミング 第3版」24章より引用。
